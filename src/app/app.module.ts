@@ -1,9 +1,7 @@
-
-import {TabViewModule} from 'primeng/tabview';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-
+import{ TableModule } from 'primeng/table'
 
 
 @NgModule({
@@ -12,7 +10,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    TabViewModule
+    
+    TableModule
 
   ],
   providers: [],
