@@ -5,3 +5,35 @@
 .navbar-toggle{
   color: #fff;
 }
+
+.navbar-menu{
+  background-color: #3a3633;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: 0;
+  width: 210px;
+  margin: 0;
+  z-index: 9998;
+  list-style: none;
+  padding: 0;
+}
+.navbar-usuario{
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight:bold;
+  color:#fff;
+  border-bottom:1px solid #525151;
+}
+.navbar-menuitem{
+  padding: 15px;
+}
+.navbar-menuitem a{
+ color:#c0bbb7;
+ text-decoration: none;
+}
+.navbar-menuitem a:hover{
+color: #fff;
+
+ }
+
