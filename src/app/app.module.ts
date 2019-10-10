@@ -10,7 +10,8 @@ import {ButtonModule} from 'primeng/components/button/button';
 import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
-
+import {CalendarModule} from 'primeng/components/calendar/calendar';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
     ButtonModule,
     DataTableModule,
     TooltipModule,
-    InputTextareaModule
+    InputTextareaModule,
+    CalendarModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
