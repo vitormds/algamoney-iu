@@ -15,7 +15,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SelectButtonModule} from 'primeng/components/selectbutton/selectbutton';
 import {DropdownModule} from 'primeng/components/dropdown/dropdown';
 import {CurrencyMaskModule} from 'ng2-currency-mask';
-import {InputMaskModule} from 'primeng/components/inputmask/inputmask'
+import {InputMaskModule} from 'primeng/components/inputmask/inputmask';
+import { LancamentoPessoaComponent } from './lancamento-pessoa/lancamento-pessoa.component'
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -25,6 +27,7 @@ import {InputMaskModule} from 'primeng/components/inputmask/inputmask'
     LancamentosPesquisaComponent,
     NavbarComponent,
     LancamentoCadastroComponent,
+    LancamentoPessoaComponent,
 
   ],
   imports: [
@@ -39,7 +42,9 @@ import {InputMaskModule} from 'primeng/components/inputmask/inputmask'
     SelectButtonModule,
     DropdownModule,
     CurrencyMaskModule,
-    InputMaskModule
+    InputMaskModule,
+    FormsModule
+
 
   ],
   providers: [],
