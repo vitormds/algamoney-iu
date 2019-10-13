@@ -18,6 +18,8 @@ import {CurrencyMaskModule} from 'ng2-currency-mask';
 import {InputMaskModule} from 'primeng/components/inputmask/inputmask';
 import { LancamentoPessoaComponent } from './lancamento-pessoa/lancamento-pessoa.component'
 import { FormsModule } from '@angular/forms';
+import { MessageComponent } from './message/message.component';
+
 
 
 
@@ -28,6 +30,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     LancamentoCadastroComponent,
     LancamentoPessoaComponent,
+    MessageComponent,
+
 
   ],
   imports: [

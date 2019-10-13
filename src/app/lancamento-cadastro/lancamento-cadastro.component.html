@@ -1,5 +1,5 @@
 <div class="container">
-  <form autocomplete="off">
+  <form autocomplete="off" #f="ngForm">
     <div class="ui-g">
       <div class="ui-g-12">
         <h1>Novo Lançamento</h1>
@@ -11,7 +11,8 @@
 
       <div class="ui-g-6 ui-md-3 ui-fluid">
         <label>Vencimento</label>
-      <p-calendar dataFormat="dd/mm/yy" readonlyInput="false"></p-calendar>
+      <p-calendar dataFormat="dd/mm/yy" readonlyInput="false" name="vencimento" ngModel #vencimento="ngModel" required></p-calendar>
+      <app-message [control]="vencimento" error="required" text="Informe uma data"></app-message>
       </div>
 
       <div class="ui-g-6 ui-md-3 ui-fluid">
@@ -19,15 +20,17 @@
         <p-calendar dataFormat="dd/mm/yy" ></p-calendar>
       </div>
       <div class="ui-g-12 ui-md-9 ui-fluid">
-        <label>Descrição {{descricao.errors | json}}</label>
+        <label>Descrição</label>
         <input pInputText type="text" name="descricao"
         ngModel #descricao="ngModel" required minlength="5">
-        <div *ngIf="descricao.hasError('required') && descricao.dirty" class="ui-message ui-messages-error">
-          Informe uma descrição
-        </div>
-        <div *ngIf="descricao.hasError('minlength') && descricao.dirty" class="ui-message ui-messages-error">
-          Minimo de {{descricao.errors.minlength.requiredLength}} caracteres. Você digitou apenas {{descricao.errors.minlength.actualLength}}
-          </div>
+
+        <app-message [control]="descricao" error="required"
+         text="Informe uma descrição">
+        </app-message>
+        <app-message [control]="descricao" error="minlength"
+        text="Minimo de {{descricao.errors?.minlength?.requiredLength}} caracteres. ">
+       </app-message>
+
       </div>
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Valor</label>
@@ -47,7 +50,7 @@
         </div>
     </div>
     <div class="ui-g-12">
-      <button pButton type="submit" label="Salvar"></button>
+      <button [disabled]="f.invalid" pButton type="submit" label="Salvar"></button>
       <button pButton type="button" label="Novo" class="ui-button-info"></button>
       <a href="javascript:;">Voltar para pesquisa</a>
 
