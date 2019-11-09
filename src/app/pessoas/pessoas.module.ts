@@ -12,6 +12,8 @@ import { TooltipModule } from 'primeng/components/tooltip/tooltip';
 import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
 import { PessoasGridComponent } from './pessoas-grid/pessoas-grid.component';
 import { LancamentoPessoaComponent } from './lancamento-pessoa/lancamento-pessoa.component';
+import { SharedModule } from 'app/shared/shared.module';
+
 
 
 
@@ -25,6 +27,9 @@ import { LancamentoPessoaComponent } from './lancamento-pessoa/lancamento-pessoa
     DataTableModule,
     TooltipModule,
     InputMaskModule,
+    SharedModule
+
+
 
 
   ],
